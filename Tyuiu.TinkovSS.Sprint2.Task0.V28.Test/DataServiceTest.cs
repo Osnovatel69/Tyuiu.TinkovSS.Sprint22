@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib;
 
 namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Test
