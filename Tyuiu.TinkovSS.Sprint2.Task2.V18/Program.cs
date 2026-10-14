@@ -1,7 +1,7 @@
 ﻿using System;
-using Tyuiu.TinkovSS.Sprint2.Task2.V18.Lib;
+using Tyuiu.TinkovSS.Sprint2.Task3.V25.Lib;
 
-namespace Tyuiu.TinkovSS.Sprint2.Task2.V18
+namespace Tyuiu.TinkovSS.Sprint2.Task3.V25
 {
     internal class Program
     {
