@@ -3,13 +3,13 @@
 namespace Tyuiu.TinkovSS.Sprint2.Task4.V10.Lib
 {
     // Объявляем интерфейс прямо здесь, чтобы не создавать отдельный файл
-    public interface ISprint2Task3V25
+    public interface ISprint2Task4V10
     {
         double Calculate(double x, double y);
     }
 
     // Наследуем класс от интерфейса
-    public class DataService : ISprint2Task3V25
+    public class DataService : ISprint2Task4V10
     {
         public double Calculate(double x, double y)
         {
