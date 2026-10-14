@@ -12,16 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib\Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="tyuiu.cources.programming.interfaces">
-      <HintPath>..\..\Tyuiu.TinkovSS.Sprint1\tyuiu.cources.programming.interfaces.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
