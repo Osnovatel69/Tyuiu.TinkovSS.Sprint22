@@ -9,7 +9,6 @@ namespace Tyuiu.TinkovSS.Sprint2.Task4.V10.Test
         [TestMethod]
         public void ValidCalculateFirstBranch()
         {
-            // Проверка ветки: x * 2 < y + 3
             DataService ds = new DataService();
             double x = 2;
             double y = 4;
@@ -22,7 +21,6 @@ namespace Tyuiu.TinkovSS.Sprint2.Task4.V10.Test
         [TestMethod]
         public void ValidCalculateSecondBranch()
         {
-            // Проверка ветки: else
             DataService ds = new DataService();
             double x = 5;
             double y = 2;

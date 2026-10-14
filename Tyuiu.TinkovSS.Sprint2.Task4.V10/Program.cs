@@ -7,7 +7,7 @@ namespace Tyuiu.TinkovSS.Sprint2.Task4.V10
     {
         static void Main(string[] args)
         {
-            Console.Title = "Спринт #2 | Выполнил: Тиньков С.С. | ...";
+            Console.Title = "Спринт #2 | Выполнил: Тиньков С.С.";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
             Console.WriteLine("* Тема: Тернарный оператор                                                *");
@@ -20,7 +20,6 @@ namespace Tyuiu.TinkovSS.Sprint2.Task4.V10
             Console.WriteLine("* использованием тернарного оператора.                                    *");
             Console.WriteLine("***************************************************************************");
 
-            // Создаем объект класса из библиотеки
             DataService ds = new DataService();
 
             Console.WriteLine("Введите значение переменной x: ");
