@@ -5,6 +5,11 @@ namespace Tyuiu.TinkovSS.Sprint2.Task3.V25.Lib
 {
     public class DataService : ISprint2Task3V25
     {
+        public double Calculate(double x)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool CheckDotInShadedArea(int x, int y)
         {
             if ((y == 3 || y == 4) && ((x >= 3 && x <= 5) || x == 12))
