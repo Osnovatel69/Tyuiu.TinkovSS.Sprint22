@@ -7,45 +7,26 @@ namespace Tyuiu.TinkovSS.Sprint2.Task3.V25.Lib
     {
         public double Calculate(double x)
         {
-            throw new NotImplementedException();
-        }
+            double y = 0;
 
-        public bool CheckDotInShadedArea(int x, int y)
-        {
-            if ((y == 3 || y == 4) && ((x >= 3 && x <= 5) || x == 12))
+            if (x > 1)
             {
-                return true;
+                y = Math.Sin(Math.Pow(x, 3)) + Math.Pow((x + 1) / (x - 1), x);
             }
-            if (y == 5 && ((x >= 3 && x <= 8) || x == 12))
+            else if (x == 0)
             {
-                return true;
+                y = Math.Pow(x, 2) - (Math.Cos(Math.Pow(x, 3)) / (x - 3));
             }
-            if ((y == 6 || y == 7) && ((x >= 2 && x <= 8) || (x >= 12 && x <= 13)))
+            else if (x > -29 && x < 2)
             {
-                return true;
+                y = Math.Pow(1 + (1 / Math.Pow(x, 2)), x);
             }
-            if (y == 8 && (x >= 6 && x <= 13))
+            else if (x < -29)
             {
-                return true;
-            }
-            if (y == 9 && (x >= 6 && x <= 12))
-            {
-                return true;
-            }
-            if (y == 10 && ((x >= 6 && x <= 7) || (x >= 11 && x <= 12)))
-            {
-                return true;
-            }
-            if (y == 11 && ((x >= 3 && x <= 7) || (x >= 11 && x <= 12)))
-            {
-                return true;
-            }
-            if (y == 12 && x == 7)
-            {
-                return true;
+                y = x + 15 + ((12 / x) * x);
             }
 
-            return false;
+            return Math.Round(y, 3);
         }
     }
 }

@@ -7,29 +7,43 @@ namespace Tyuiu.TinkovSS.Sprint2.Task3.V25.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidCheckDotInShadedArea()
+        public void ValidCalculateCondition1()
         {
             DataService ds = new DataService();
-
-            int x = 4;
-            int y = 5;
-
-            bool res = ds.CheckDotInShadedArea(x, y);
-
-            Assert.AreEqual(true, res);
+            double x = 2;
+            double res = ds.Calculate(x);
+            double wait = 9.989;
+            Assert.AreEqual(wait, res);
         }
 
         [TestMethod]
-        public void ValidCheckDotOutsideShadedArea()
+        public void ValidCalculateCondition2()
         {
             DataService ds = new DataService();
+            double x = 0;
+            double res = ds.Calculate(x);
+            double wait = 0.333;
+            Assert.AreEqual(wait, res);
+        }
 
-            int x = 1;
-            int y = 1;
+        [TestMethod]
+        public void ValidCalculateCondition3()
+        {
+            DataService ds = new DataService();
+            double x = 1;
+            double res = ds.Calculate(x);
+            double wait = 2.0;
+            Assert.AreEqual(wait, res);
+        }
 
-            bool res = ds.CheckDotInShadedArea(x, y);
-
-            Assert.AreEqual(false, res);
+        [TestMethod]
+        public void ValidCalculateCondition4()
+        {
+            DataService ds = new DataService();
+            double x = -30;
+            double res = ds.Calculate(x);
+            double wait = -3.0;
+            Assert.AreEqual(wait, res);
         }
     }
 }
