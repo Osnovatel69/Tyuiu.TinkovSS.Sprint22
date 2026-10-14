@@ -1,53 +1,35 @@
-﻿nameusing Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tyuiu.TinkovSS.Sprint2.Task3.V25.Lib;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tyuiu.TinkovSS.Sprint2.Task2.V18.Lib;
 
-namespace Tyuiu.TinkovSS.Sprint2.Task3.V25.Test
+namespace Tyuiu.TinkovSS.Sprint2.Task2.V18.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidCalculateCondition1()
+        public void ValidCheckDotInShadedArea()
         {
             DataService ds = new DataService();
-            double x = 2;
-            double res = ds.Calculate(x);
-            // sin(8) + ((3/1)^2) = 0.989358 + 9 = 9.989
-            double wait = 9.989;
-            Assert.AreEqual(wait, res);
+
+            int x = 4;
+            int y = 5;
+
+            bool res = ds.CheckDotInShadedArea(x, y);
+
+            Assert.AreEqual(true, res);
         }
 
         [TestMethod]
-        public void ValidCalculateCondition2()
+        public void ValidCheckDotOutsideShadedArea()
         {
             DataService ds = new DataService();
-            double x = 0;
-            double res = ds.Calculate(x);
-            // 0^2 - (cos(0) / (0 - 3)) = - (1 / -3) = 0.333
-            double wait = 0.333;
-            Assert.AreEqual(wait, res);
-        }
 
-        [TestMethod]
-        public void ValidCalculateCondition3()
-        {
-            DataService ds = new DataService();
-            double x = 1;
-            double res = ds.Calculate(x);
-            // (1 + 1/1)^1 = 2
-            double wait = 2.0;
-            Assert.AreEqual(wait, res);
-        }
+            int x = 1;
+            int y = 1;
 
-        [TestMethod]
-        public void ValidCalculateCondition4()
-        {
-            DataService ds = new DataService();
-            double x = -30;
-            double res = ds.Calculate(x);
-            // -30 + 15 + (12 / -30) * (-30) = -30 + 15 + 12 = -3
-            double wait = -3.0;
-            Assert.AreEqual(wait, res);
+            bool res = ds.CheckDotInShadedArea(x, y);
+
+            Assert.AreEqual(false, res);
         }
     }
 }

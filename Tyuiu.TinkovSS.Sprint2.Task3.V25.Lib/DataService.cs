@@ -1,32 +1,46 @@
 ﻿using System;
 using tyuiu.cources.programming.interfaces.Sprint2;
 
-namespace Tyuiu.TinkovSS.Sprint2.Task3.V25.Lib
+namespace Tyuiu.TinkovSS.Sprint2.Task2.V18.Lib
 {
-    public class DataService : ISprint2Task3V25
+    public class DataService : ISprint2Task2V18
     {
-        public double Calculate(double x)
+        public bool CheckDotInShadedArea(int x, int y)
         {
-            double y = 0;
+            if ((y == 3 || y == 4) && ((x >= 3 && x <= 5) || x == 12))
+            {
+                return true;
+            }
+            if (y == 5 && ((x >= 3 && x <= 8) || x == 12))
+            {
+                return true;
+            }
+            if ((y == 6 || y == 7) && ((x >= 2 && x <= 8) || (x >= 12 && x <= 13)))
+            {
+                return true;
+            }
+            if (y == 8 && (x >= 6 && x <= 13))
+            {
+                return true;
+            }
+            if (y == 9 && (x >= 6 && x <= 12))
+            {
+                return true;
+            }
+            if (y == 10 && ((x >= 6 && x <= 7) || (x >= 11 && x <= 12)))
+            {
+                return true;
+            }
+            if (y == 11 && ((x >= 3 && x <= 7) || (x >= 11 && x <= 12)))
+            {
+                return true;
+            }
+            if (y == 12 && x == 7)
+            {
+                return true;
+            }
 
-            if (x > 1)
-            {
-                y = Math.Sin(Math.Pow(x, 3)) + Math.Pow((x + 1) / (x - 1), x);
-            }
-            else if (x == 0)
-            {
-                y = Math.Pow(x, 2) - (Math.Cos(Math.Pow(x, 3)) / (x - 3));
-            }
-            else if (x > -29 && x < 2)
-            {
-                y = Math.Pow(1 + (1 / Math.Pow(x, 2)), x);
-            }
-            else if (x < -29)
-            {
-                y = x + 15 + ((12 / x) * x); // (12 / x) * x = 12 при x != 0
-            }
-
-            return Math.Round(y, 3);
+            return false;
         }
     }
 }
