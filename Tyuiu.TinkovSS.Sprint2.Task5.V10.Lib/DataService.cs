@@ -1,8 +1,9 @@
 ﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
 
 namespace Tyuiu.TinkovSS.Sprint2.Task5.V10.Lib
 {
-    public class DataService
+    public class DataService : ISprint2Task5V10
     {
         public string Calculate(int g, int m, int n)
         {
@@ -48,6 +49,11 @@ namespace Tyuiu.TinkovSS.Sprint2.Task5.V10.Lib
             }
 
             return $"{n:D2}.{m:D2}.{g:D4}";
+        }
+
+        string ISprint2Task5V10.FindDateOfPreviousDay(int g, int m, int n)
+        {
+            throw new NotImplementedException();
         }
 
         private int GetDaysInMonth(int m)
